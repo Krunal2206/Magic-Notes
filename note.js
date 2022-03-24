@@ -17,13 +17,8 @@ addBtn.addEventListener("click", function (e) {
         title: addTitle.value,
         text: addTxt.value
     }
-    if (addTxt.value = "" && addTitle.value = "") {
-        alert("Please enter something into notes");
-    }
-    else {
-        notesObj.push(myObj);
-        localStorage.setItem("notes", JSON.stringify(notesObj));
-    }
+    notesObj.push(myObj);
+    localStorage.setItem("notes", JSON.stringify(notesObj));
     addTxt.value = "";
     addTitle.value = "";
     showNotes();
